@@ -1,0 +1,209 @@
+body, ul, p, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  background-color: #fbfcfc;
+  background-image: url("../images/bg1-left.png"), url("../images/bg2-left.png"), url("../images/bg1-right.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 15vw, cover, 52vw;
+  background-position: -120px 200px, 0px 900px, 100% 0;
+}
+
+.big-wrapper {
+  margin: 0 5vw;
+}
+
+.small-wrapper {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+/* Header */
+.main-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.main-header .logo {
+  color: #1c2056;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.main-header .logo .logo__highlighted-letter {
+  color: #2870db;
+  -webkit-transition: color 1s;
+  transition: color 1s;
+}
+
+.main-header .main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main-header .main-nav__item a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 5px 2vw;
+}
+
+.main-header .main-nav__item a:hover {
+  color: #14215e;
+  background-color: #ffffff;
+  border-radius: 13px;
+  -webkit-transition: color 0.2s, background-color 0.2s;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.main-header .main-nav__item:first-child {
+  margin-left: 0;
+}
+
+/* Home section */
+.welcome {
+  color: #1c2056;
+  margin-bottom: 26vw;
+}
+
+.welcome .welcome-title {
+  width: 35vw;
+  font-size: 4vw;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.welcome .welcome-subtitle {
+  width: 35vw;
+  margin-bottom: 70px;
+}
+
+.welcome .start-btn {
+  color: #ffffff;
+  background-color: #2870db;
+  padding: 20px 50px;
+  border-radius: 50px;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.welcome .start-btn:hover {
+  -webkit-box-shadow: 0px 22px 23.52px 0.48px rgba(17, 83, 165, 0.21);
+          box-shadow: 0px 22px 23.52px 0.48px rgba(17, 83, 165, 0.21);
+}
+
+/* Go Hiking section */
+.go-hiking__title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #263238;
+  width: 690px;
+  margin: 0 auto;
+  margin-bottom: 15.5vw;
+}
+
+.go-hiking .hiking-roles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.go-hiking .hiking-roles .hiking-role {
+  position: relative;
+  max-width: 450px;
+  margin-right: auto;
+  margin-bottom: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 70px 90px;
+  border-radius: 30px;
+}
+
+.go-hiking .hiking-roles .hiking-role__title {
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+.go-hiking .hiking-roles .hiking-role__subtitle {
+  line-height: 2.5em;
+}
+
+.go-hiking .hiking-roles .hiking-role::before {
+  content: "";
+  display: block;
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: calc(164px / 3);
+  height: calc(129px / 3);
+  background-image: url(../images/advocate-icon.png);
+}
+
+.go-hiking .hiking-roles .hiking-role:nth-child(2)::before {
+  background-image: url(../images/volunteer-icon.png);
+  width: calc(119px / 3);
+  height: calc(150px / 3);
+}
+
+.go-hiking .hiking-roles .hiking-role:nth-child(3)::before {
+  background-image: url(../images/explore-icon.png);
+  width: calc(187px / 3);
+  height: calc(108px / 3);
+}
+
+.go-hiking .hiking-roles .hiking-role:nth-child(2n) {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+@media (max-width: 1024px) {
+  .go-hiking .hiking-roles .hiking-role,
+  .go-hiking .hiking-roles .hiking-role:nth-child(2n) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.go-hiking .learn-btn {
+  color: #ffffff;
+  background-color: #2870db;
+  padding: 20px 50px;
+  border-radius: 50px;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.go-hiking .learn-btn:hover {
+  -webkit-box-shadow: 0px 22px 23.52px 0.48px rgba(17, 83, 165, 0.21);
+          box-shadow: 0px 22px 23.52px 0.48px rgba(17, 83, 165, 0.21);
+}
+/*# sourceMappingURL=style.css.map */

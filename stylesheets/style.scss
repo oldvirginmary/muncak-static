@@ -1,0 +1,188 @@
+@import "components";
+
+body, ul, p, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+
+  background-color: #fbfcfc;
+  background-image: 
+    url("../images/bg1-left.png"),
+    url("../images/bg2-left.png"),
+    url("../images/bg1-right.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 15vw, cover, 52vw;
+  background-position: -120px 200px, 0px 900px, 100% 0;
+}
+
+.big-wrapper {
+  margin: 0 5vw;
+}
+
+.small-wrapper {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+
+/* Header */
+
+.main-header {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+
+  .logo {
+    color: #1c2056;
+    font-weight: bold;
+    font-size: 40px;
+
+    .logo__highlighted-letter {
+      color: #2870db;
+      transition: color 1s;
+    }
+  }
+
+  .main-nav {
+    display: flex;
+    margin-left: auto;
+    list-style: none;
+    box-sizing: border-box;
+
+    &__item {
+      a {
+        text-decoration: none;
+        color: #ffffff;
+        padding: 5px 2vw;
+      }
+      
+      a:hover {
+        color: #14215e;
+        background-color: #ffffff;
+        border-radius: 13px;
+
+        transition: color 0.2s, background-color 0.2s;
+      }
+    }
+
+    &__item:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+
+/* Home section */
+
+.welcome {
+  $title-width: 35vw;
+  color: #1c2056;
+  margin-bottom: 26vw;
+
+  .welcome-title {
+    width: $title-width;
+    font-size: 4vw;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  .welcome-subtitle {
+    width: $title-width;
+    margin-bottom: 70px;
+  }
+
+  .start-btn {
+    @include button;
+  }
+
+  .start-btn:hover {
+    box-shadow: 0px 22px 23.52px 0.48px rgba(17, 83, 165, 0.21);
+  }
+}
+
+
+/* Go Hiking section */
+
+.go-hiking {
+  &__title {
+    @include screenTitle;
+  }
+
+  .hiking-roles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .hiking-role {
+      position: relative;
+
+      max-width: 450px;
+      margin-right: auto;
+      margin-bottom: 50px;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 70px 90px;
+      border-radius: 30px;
+
+      &__title {
+        font-size: 24px;
+        margin-bottom: 50px;
+      }
+
+      &__subtitle {
+        line-height: 2.5em;
+      }
+    }
+
+    .hiking-role::before {
+      content: "";
+      display: block;
+      margin-bottom: 30px;
+
+      background-repeat: no-repeat;
+      background-size: 100%;
+
+      width: calc(164px / 3);
+      height: calc(129px / 3);
+
+      background-image: url(../images/advocate-icon.png);
+    }
+
+    .hiking-role:nth-child(2)::before {
+      background-image: url(../images/volunteer-icon.png);
+      width: calc(119px / 3);
+      height: calc(150px / 3);
+    }
+
+    .hiking-role:nth-child(3)::before {
+      background-image: url(../images/explore-icon.png);
+      width: calc(187px / 3);
+      height: calc(108px / 3);
+    }
+
+    .hiking-role:nth-child(2n) {
+      margin-right: 0;
+      margin-left: auto;
+    }
+
+    @media (max-width: 1024px) {
+      .hiking-role,
+      .hiking-role:nth-child(2n) {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .learn-btn {
+    @include button;
+  }
+
+  .learn-btn:hover {
+    box-shadow: 0px 22px 23.52px 0.48px rgba(17, 83, 165, 0.21);
+  }
+}
